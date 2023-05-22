@@ -9,9 +9,10 @@ import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRa
 export function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
+    let [switchOn, setSwitchOn] = useState<boolean>(false);
     return (
         <div className={'App'}>
-            <OnOff/>
+            <OnOff on={switchOn} onChange={setSwitchOn}/>
             {/*<PageTitle title = {"Hello!"}/>*/}
             {/*<Rating value = {3}/>*/}
             <Accordion titleValue = {"Menu1"}
