@@ -6,7 +6,7 @@ import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 
-function App() {
+export function App() {
     return (
         <div className={'App'}>
             <OnOff/>
@@ -25,8 +25,7 @@ type PageTitlePropsType = {
     title: string
 }
 
-function PageTitle(props: PageTitlePropsType) {
-    return <h1>{props.title}</h1>
-}
-
-export default App;
+// export function PageTitle(props: PageTitlePropsType) {
+//     return <h1>{props.title}</h1>
+// }
+//
