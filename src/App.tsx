@@ -5,7 +5,7 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
-import {ControlledInput} from "./components/inputs/ControlledInput";
+import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./components/inputs/ControlledInput";
 import {UncontrolledInput} from "./components/inputs/UncontrolledInput";
 
 export function App() {
@@ -25,7 +25,8 @@ export function App() {
             {/*<UncontrolledAccordion titleValue={'--MENU--'}/>*/}
             {/*<UncontrolledRating />*/}
             <ControlledInput/>
-            <UncontrolledInput/>
+            <ControlledSelect/>
+            <ControlledCheckbox/>
         </div>
     );
 }
