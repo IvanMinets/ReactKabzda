@@ -12,16 +12,27 @@ export function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
     let [switchOn, setSwitchOn] = useState<boolean>(false);
+    const onClickCallback = () => {
+        alert("some item was clicked")
+    }
     return (
         <div className={'App'}>
             <OnOff on={switchOn} onChange={setSwitchOn}/>
             {/*<PageTitle title = {"Hello!"}/>*/}
             {/*<Rating value = {3}/>*/}
-            <Accordion titleValue = {"Menu1"}
+            <Accordion titleValue={"Menu1"}
                        collapsed={accordionCollapsed}
-                       onChange={ ()=>{setAccordionCollapsed(!accordionCollapsed)} }/>
+                       onChange={() => {
+                           setAccordionCollapsed(!accordionCollapsed)
+                       }}
+                       items={[{title: "Ivan1", value: 1}, {title: "Ivan2", value: 2}, {
+                           title: "Ivan3",
+                           value: 3
+                       }, {title: "Ivan4", value: 4}]}
+                       onClick={onClickCallback}
+            />
             {/*<Accordion titleValue = {"Users123"} collapsed={false}/>*/}
-            <Rating value = {ratingValue} onClick={setRatingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             {/*<UncontrolledAccordion titleValue={'--MENU--'}/>*/}
             {/*<UncontrolledRating />*/}
             {/*<ControlledInput/>*/}
@@ -30,6 +41,7 @@ export function App() {
         </div>
     );
 }
+
 // type PageTitlePropsType = {
 //     title: string
 // }
