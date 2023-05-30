@@ -15,15 +15,17 @@ export function Select (props: SelectPropsType) {
     const [value, setValue] = useState<string>(props.value);
 
     const onChangeCollapsed = () =>{ setCollapsed(!collapsed) }
-    const onBlurCollapsed = () =>{ setCollapsed(collapsed) }
-
-    const onValueAndCollapsedHandler = () => {
+    const onBlurCollapsed = () =>{
+        setCollapsed(true);
+        onChangeCollapsed();
     }
 
     return (
         <div>
-            <div className={"SelectCursor"} onClick={onChangeCollapsed} onBlur={onBlurCollapsed}>{props.items.find((i) => value === i.title)?.title}</div>
-            {collapsed && <div className={"SelectCursor"}>{props.items.map(i => <div onClick={()=>{setValue(i.title)}}>{i.title}</div>)}</div>}
+            <div className={"SelectCursor"} onClick={onChangeCollapsed} onBlur={onBlurCollapsed}>
+                {props.items.find((i) => value === i.title)?.title}
+            </div>
+            {collapsed && <div className={"SelectCursor"}>{props.items.map(i => <div onClick={()=>{setValue(i.title); onChangeCollapsed()}}>{i.title}</div>)}</div>}
         </div>
     )
 }
