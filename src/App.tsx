@@ -5,6 +5,8 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import {ControlledInput} from "./components/inputs/ControlledInput";
+import {UncontrolledInput} from "./components/inputs/UncontrolledInput";
 
 export function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
@@ -22,15 +24,15 @@ export function App() {
             <Rating value = {ratingValue} onClick={setRatingValue}/>
             {/*<UncontrolledAccordion titleValue={'--MENU--'}/>*/}
             {/*<UncontrolledRating />*/}
+            <ControlledInput/>
+            <UncontrolledInput/>
         </div>
     );
 }
-
-type PageTitlePropsType = {
-    title: string
-}
-
-// export function PageTitle(props: PageTitlePropsType) {
-//     return <h1>{props.title}</h1>
+// type PageTitlePropsType = {
+//     title: string
 // }
-//
+// // export function PageTitle(props: PageTitlePropsType) {
+// //     return <h1>{props.title}</h1>
+// // }
+// //
