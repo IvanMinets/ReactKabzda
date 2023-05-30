@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 type ItemType = {
     title: string
@@ -39,6 +39,7 @@ type AccordionBodyPropsType = {
 }
 
 function AccordionBody(props: AccordionBodyPropsType) {
+
     return (
         <div>
             <ul>

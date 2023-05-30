@@ -5,13 +5,16 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
-import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./components/inputs/ControlledInput";
-import {UncontrolledInput} from "./components/inputs/UncontrolledInput";
+import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./components/Inputs/ControlledInput";
+import {UncontrolledInput} from "./components/Inputs/UncontrolledInput";
+import {Select} from "./components/Select/Select";
 
 export function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
     let [switchOn, setSwitchOn] = useState<boolean>(false);
+
+
     const onClickCallback = () => {
         alert("some item was clicked")
     }
@@ -36,7 +39,15 @@ export function App() {
             {/*<UncontrolledAccordion titleValue={'--MENU--'}/>*/}
             {/*<UncontrolledRating />*/}
             {/*<ControlledInput/>*/}
-            {/*<ControlledSelect/>*/}
+            <ControlledSelect/>
+            <Select value={"Minsk"}
+                    onChange={()=>{}}
+                    items={[
+                        {title: "Minsk", value: 1},
+                        {title: "Moscow", value: 2},
+                        {title: "Kiev", value: 3},
+                        {title: "Odessa", value: 4}
+                    ]}/>
             {/*<ControlledCheckbox/>*/}
         </div>
     );
