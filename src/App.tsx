@@ -24,9 +24,9 @@ export function App() {
             <Rating value = {ratingValue} onClick={setRatingValue}/>
             {/*<UncontrolledAccordion titleValue={'--MENU--'}/>*/}
             {/*<UncontrolledRating />*/}
-            <ControlledInput/>
-            <ControlledSelect/>
-            <ControlledCheckbox/>
+            {/*<ControlledInput/>*/}
+            {/*<ControlledSelect/>*/}
+            {/*<ControlledCheckbox/>*/}
         </div>
     );
 }
