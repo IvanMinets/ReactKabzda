@@ -8,11 +8,13 @@ import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRa
 import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./components/Inputs/ControlledInput";
 import {UncontrolledInput} from "./components/Inputs/UncontrolledInput";
 import {Select} from "./components/Select/Select";
+import {Select2} from "./components/Select/Select2";
 
 export function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
     let [switchOn, setSwitchOn] = useState<boolean>(false);
+    const [value, setValue] = useState('2');
 
 
     const onClickCallback = () => {
@@ -39,15 +41,15 @@ export function App() {
             {/*<UncontrolledAccordion titleValue={'--MENU--'}/>*/}
             {/*<UncontrolledRating />*/}
             {/*<ControlledInput/>*/}
-            <ControlledSelect/>
-            <Select value={"Minsk"}
-                    onChange={()=>{}}
-                    items={[
-                        {title: "Minsk", value: 1},
-                        {title: "Moscow", value: 2},
-                        {title: "Kiev", value: 3},
-                        {title: "Odessa", value: 4}
-                    ]}/>
+            {/*<ControlledSelect/>*/}
+            <Select2
+                value={value}
+                onChange={setValue}
+                items={[
+                {title: "Minsk", value: "1"},
+                {title: "Moscow", value: "2"},
+                {title: "Kiev", value: "3"},
+            ]}/>
             {/*<ControlledCheckbox/>*/}
         </div>
     );
