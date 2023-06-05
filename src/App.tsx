@@ -41,7 +41,7 @@ export function App() {
             {/*<UncontrolledAccordion titleValue={'--MENU--'}/>*/}
             {/*<UncontrolledRating />*/}
             {/*<ControlledInput/>*/}
-            {/*<ControlledSelect/>*/}
+            <ControlledSelect/>
             <Select2
                 value={value}
                 onChange={setValue}
