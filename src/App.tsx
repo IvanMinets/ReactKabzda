@@ -10,7 +10,8 @@ import {UncontrolledInput} from "./components/Inputs/UncontrolledInput";
 import {Select} from "./components/Select/Select";
 import {Select2} from "./components/Select/Select2";
 import {Example1, NewMessagesCounter, Users} from "./testDirectory/ReactMemo";
-import {DifficultCountingExample, HelpsToReactMemo} from "./testDirectory/UseMemo";
+import {LikeUseCallback} from "./testDirectory/UseMemo";
+// import {DifficultCountingExample, HelpsToReactMemo} from "./testDirectory/UseMemo";
 
 export function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
@@ -54,8 +55,7 @@ export function App() {
             {/*]}/>*/}
             {/*<ControlledCheckbox/>*/}
             {/*<Example1/>*/}
-            <DifficultCountingExample/>
-            <HelpsToReactMemo/>
+            <LikeUseCallback/>
         </div>
     );
 }

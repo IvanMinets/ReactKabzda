@@ -1,60 +1,36 @@
 import React, {useMemo, useState} from "react";
 
-export const DifficultCountingExample = () => {
-
-    const [a, setA] = useState<number>(5);
-    const [b, setB] = useState<number>(5);
-
-    let resultA = 1;
-    let resultB = 1;
-
-    resultA = useMemo(()=>{
-        let tempResultA = 1;
-        for (let i = 1; i <= a; i++) {
-            let fake = 0;
-            while(fake < 10000000) {
-                fake++;
-                const fakeValue = Math.random();
-            }
-            tempResultA = tempResultA * i;
-        }
-        return tempResultA
-    },[a])
+// export const UsersSecret = (props: {users: Array<string>}) => {
+//     console.log("Users secret")
+//     return <div>{props.users.map((u,i) => <div key={i}>{u}</div>)}</div>
+// }
 
 
-    for (let i = 1; i <= b; i++) {
-        resultB = resultB * i;
-    }
-    return <>
-        <input value={a} onChange={(e)=>setA(+e.currentTarget.value)}/>
-        <input value={b} onChange={(e)=>setB(+e.currentTarget.value)}/>
-        <hr/>
-        <div>
-            Result for a : {resultA}
-        </div>
-        <div>
-            Result for b : {resultB}
-        </div>
-    </>
-}
 
-export const UsersSecret = (props: {users: Array<string>}) => {
-    console.log("Users secret")
-    return <div>{props.users.map((u,i) => <div key={i}>{u}</div>)}</div>
-}
-
-export const Users = React.memo(UsersSecret);
-
-export const HelpsToReactMemo = () => {
+export const LikeUseCallback = () => {
+    console.log('LikeUseCallback')
     const [counter, setCounter] = useState(0);
-    const [users, setUsers] = useState(['Ivan','Ivan2','Ivan3'])
+    const [books, setBooks] = useState(['React','JS','CSS', 'HTML'])
 
     const newArray = useMemo(()=>{
-        return users.filter(u=>u.toLowerCase().indexOf("a")>-1)
-    },[users])
+        return books.filter(book=>book.toLowerCase().indexOf("a")>-1)
+    },[books])
+
+    const addBook = ()=> {
+        const newUsers = [...books, "Angular" + new Date().getTime()];
+        setBooks(newUsers);
+    }
     return <>
         <button onClick={()=>setCounter(counter+1)}>+</button>
+        <button onClick={()=>addBook()}>add book</button>
         {counter}
-        <Users users={newArray}/>
+        <Book books={newArray}/>
     </>
 }
+
+export const BooksSecret = (props: {books: Array<string>}) => {
+    console.log("Books secret")
+    return <div>{props.books.map((book,i) => <div key={i}>{book}</div>)}</div>
+}
+
+export const Book = React.memo(BooksSecret);
