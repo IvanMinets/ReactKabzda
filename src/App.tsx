@@ -9,8 +9,9 @@ import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./component
 import {UncontrolledInput} from "./components/Inputs/UncontrolledInput";
 import {Select} from "./components/Select/Select";
 import {Select2} from "./components/Select/Select2";
-import {Example1, NewMessagesCounter, Users} from "./testDirectory/ReactMemo";
+// import {Example1, NewMessagesCounter, Users} from "./testDirectory/ReactMemo";
 import {LikeUseCallback} from "./testDirectory/UseMemo";
+import {Example1} from "./testDirectory/UseState";
 // import {DifficultCountingExample, HelpsToReactMemo} from "./testDirectory/UseMemo";
 
 export function App() {
