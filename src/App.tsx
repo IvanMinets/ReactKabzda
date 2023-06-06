@@ -12,6 +12,7 @@ import {Select2} from "./components/Select/Select2";
 // import {Example1, NewMessagesCounter, Users} from "./testDirectory/ReactMemo";
 import {LikeUseCallback} from "./testDirectory/UseMemo";
 import {Example1} from "./testDirectory/UseState";
+import {SimpleExample} from "./testDirectory/UseEffect";
 // import {DifficultCountingExample, HelpsToReactMemo} from "./testDirectory/UseMemo";
 
 export function App() {
@@ -57,7 +58,8 @@ export function App() {
             {/*<ControlledCheckbox/>*/}
             {/*<Example1/>*/}
             {/*<LikeUseCallback/>*/}
-            <Example1/>
+            {/*<Example1/>*/}
+            <SimpleExample/>
         </div>
     );
 }
