@@ -55,7 +55,8 @@ export function App() {
             {/*]}/>*/}
             {/*<ControlledCheckbox/>*/}
             {/*<Example1/>*/}
-            <LikeUseCallback/>
+            {/*<LikeUseCallback/>*/}
+            <Example1/>
         </div>
     );
 }
