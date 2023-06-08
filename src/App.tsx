@@ -13,6 +13,7 @@ import {Select2} from "./components/Select/Select2";
 import {LikeUseCallback} from "./testDirectory/UseMemo";
 import {Example1} from "./testDirectory/UseState";
 import {SimpleExample} from "./testDirectory/UseEffect";
+import {Clock} from "./components/clock/clock";
 // import {DifficultCountingExample, HelpsToReactMemo} from "./testDirectory/UseMemo";
 
 export function App() {
@@ -59,7 +60,8 @@ export function App() {
             {/*<Example1/>*/}
             {/*<LikeUseCallback/>*/}
             {/*<Example1/>*/}
-            <SimpleExample/>
+            {/*<SimpleExample/>*/}
+            <Clock/>
         </div>
     );
 }
