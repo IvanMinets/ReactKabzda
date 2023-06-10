@@ -28,7 +28,7 @@ type BookSecretPropsType = {
     addBook: () => void
 }
 export const BooksSecret = (props: BookSecretPropsType) => {
-    console.log("Books secret")
+    console.log("Books secrets")
     return <div>
         <button onClick={() => props.addBook()}>add book</button>
         {props.books.map((book, i) => <div key={i}>{book}
