@@ -12,7 +12,7 @@ import {Select2} from "./components/Select/Select2";
 // import {Example1, NewMessagesCounter, Users} from "./testDirectory/ReactMemo";
 import {LikeUseCallback} from "./testDirectory/UseMemo";
 import {Example1} from "./testDirectory/UseState";
-import {SimpleExample} from "./testDirectory/UseEffect";
+import {ResetUseEffect, SimpleExample} from "./testDirectory/UseEffect";
 import {Clock} from "./components/clock/clock";
 import {InteractiveClock} from "./components/clock/InteractiveClock";
 // import {DifficultCountingExample, HelpsToReactMemo} from "./testDirectory/UseMemo";
@@ -63,7 +63,8 @@ export function App() {
             {/*<Example1/>*/}
             {/*<SimpleExample/>*/}
             {/*<Clock/>*/}
-            <InteractiveClock/>
+            {/*<InteractiveClock/>*/}
+            <ResetUseEffect/>
         </div>
     );
 }
